@@ -1,0 +1,14 @@
+devices:
+  - type: touch
+    name: PORT_1
+    color: '#16a34a'
+  - type: touch
+    name: PORT_2
+    color: '#2563eb'
+  - type: touch
+    name: PORT_3
+    color: '#dc2626'
+  - type: touch
+    name: PORT_4
+    color: '#fde047'
+name: Wheels

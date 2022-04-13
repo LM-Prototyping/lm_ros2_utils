@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="CompassSensorTest">
+    <webots>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>CompassSensorTest</robotName>
+            <port>PORT_1</port>
+        </plugin>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>CompassSensorTest</robotName>
+            <port>PORT_2</port>
+        </plugin>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>CompassSensorTest</robotName>
+            <port>PORT_3</port>
+        </plugin>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>CompassSensorTest</robotName>
+            <port>PORT_4</port>
+        </plugin>
+    </webots>
+</robot>
