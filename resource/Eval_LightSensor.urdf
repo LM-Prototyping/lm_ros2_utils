@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="Eval_LightSensor">
+    <webots>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>Eval_LightSensor</robotName>
+            <port>PORT_1</port>
+        </plugin>
+        <plugin type="webots_ros2.light_plugin.LightPlugin">
+            <robotName>Eval_LightSensor</robotName>
+            <port>PORT_2</port>
+        </plugin>
+        <plugin type="webots_ros2.motor_plugin.MotorPlugin">
+            <robotName>Eval_LightSensor</robotName>
+            <port>PORT_A</port>
+        </plugin>
+        <plugin type="webots_ros2.motor_plugin.MotorPlugin">
+            <robotName>Eval_LightSensor</robotName>
+            <port>PORT_B</port>
+        </plugin>
+        <plugin type="webots_ros2.clock_plugin.ClockPlugin">
+            <robotName>Eval_LightSensor</robotName>
+        </plugin>
+    </webots>
+</robot>

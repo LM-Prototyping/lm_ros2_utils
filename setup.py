@@ -2,11 +2,14 @@ from setuptools import setup
 import os
 
 
+PATH = f"{os.getenv('LM_FRAMEWORK_PATH')}ros2Workspace/src/lm_ros2_utils"
+
 files_in_dir = (
     lambda dir: 
         [
             f"{dir}/{file}" for file in 
-            os.listdir(f"{os.getenv('LM_FRAMEWORK_PATH')}ros2Workspace/src/lm_ros2_utils/{dir}")
+            os.listdir(f"{PATH}/{dir}")
+            if os.path.isfile(f"{PATH}/{dir}/{file}")
         ]
     )
 
@@ -20,6 +23,8 @@ data_files.append(("share/" + package_name + "/launch", launch_files))
 resources_files = files_in_dir("resource")
 data_files.append(("share/" + package_name + "/resource", resources_files))
 
+script_files = files_in_dir("lm_ros2_utils")
+data_files.append(("share/" + package_name + "/lm_ros2_utils", script_files))
 
 setup(
     name=package_name,

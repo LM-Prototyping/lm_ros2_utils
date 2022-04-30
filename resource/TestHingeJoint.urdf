@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="TestHingeJoint">
+    <webots>
+        <plugin type="webots_ros2.compass_plugin.CompassPlugin">
+            <robotName>TestHingeJoint</robotName>
+            <port>PORT_1</port>
+        </plugin>
+        <plugin type="webots_ros2.motor_plugin.MotorPlugin">
+            <robotName>TestHingeJoint</robotName>
+            <port>PORT_A</port>
+        </plugin>
+        <plugin type="webots_ros2.motor_plugin.MotorPlugin">
+            <robotName>TestHingeJoint</robotName>
+            <port>PORT_B</port>
+        </plugin>
+        <plugin type="webots_ros2.clock_plugin.ClockPlugin">
+            <robotName>TestHingeJoint</robotName>
+        </plugin>
+    </webots>
+</robot>
