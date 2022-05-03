@@ -74,7 +74,7 @@ def parse_urdf(filename):
                 executable=node_name,
                 output="screen",
                 emulate_tty=True,
-                namespace=node[0].text + "/" + port_mapping[node[1].text],
+                namespace=node[0].text + "/" + node[1].text,
                 parameters=[{
                     "port": port_mapping[node[1].text],
                     "robot_name": node[0].text,
