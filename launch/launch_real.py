@@ -58,6 +58,8 @@ def parse_urdf(filename):
             node_name = "light_sensor"
         if touch_matcher.search(plugin_name):
             node_name = "touch_sensor"
+        if re.compile("MotorPlugin").search(plugin_name):
+            node_name = "motor_node"
         if re.compile("ClockPlugin").search(plugin_name):
             continue
 
