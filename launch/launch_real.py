@@ -61,6 +61,18 @@ def parse_urdf(filename):
         if re.compile("MotorPlugin").search(plugin_name):
             node_name = "motor_node"
         if re.compile("ClockPlugin").search(plugin_name):
+            nodes.append(
+                Node(
+                    package="brickpi3_ros2",
+                    executable="clock_node",
+                    output="screen",
+                    emulate_tty=True,
+                    parameters=[{
+                        "timestep": 32
+                    }]
+                )
+            )
+            
             continue
 
         print(node[0], node[1])
