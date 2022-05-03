@@ -61,8 +61,8 @@ def parse_urdf(filename):
                 output="screen",
                 emulate_tty=True,
                 parameters=[{
-                    "port": "PORT_A",
-                    "robot_name": "RN",
+                    "port": node[1].text,
+                    "robot_name": node[0].text,
                     "timestep": 32
                 }]
             )

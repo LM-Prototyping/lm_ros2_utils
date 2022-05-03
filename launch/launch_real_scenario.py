@@ -35,9 +35,9 @@ def generate_launch_description():
             }.items()
         ),
         Node(
-            package="evaluation_scenario",
+            package="evaluation_scenarios",
             executable=scenario,
-            output="sceen",
+            output="screen",
             emulate_tty=True
         )
         # Node(
