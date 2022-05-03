@@ -27,18 +27,18 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
                 os.path.join(
-                    get_package_share_directory("lm_ros2_utils", "launch", "launch_real.py")
+                    get_package_share_directory("lm_ros2_utils"), "launch", "launch_real.py"
                 ),
-                launch_arguments={
-                    "robot_name": robot_name
-                }.items()
             ),
-            Node(
-                package="evaluation_scenario",
-                executable=scenario,
-                output="sceen",
-                emulate_tty=True
-            )
+            launch_arguments={
+                "robot_name": robot_name
+            }.items()
+        )
+        Node(
+            package="evaluation_scenario",
+            executable=scenario,
+            output="sceen",
+            emulate_tty=True
         )
         # Node(
         #     package='webots_ros2_driver',
