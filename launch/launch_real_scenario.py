@@ -33,7 +33,7 @@ def generate_launch_description():
             launch_arguments={
                 "robot_name": robot_name
             }.items()
-        )
+        ),
         Node(
             package="evaluation_scenario",
             executable=scenario,
