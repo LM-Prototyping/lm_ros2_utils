@@ -18,6 +18,18 @@ def get_configuration_file_path(robot_name):
 
     return filepath
 
+port_mapping = {
+    "PORT_A": 0x01,
+    "PORT_B": 0x02,
+    "PORT_C": 0x03,
+    "PORT_D": 0x04,
+
+    "PORT_1": 0x01,
+    "PORT_2": 0x02,
+    "PORT_3": 0x03,
+    "PORT_4": 0x04,
+}
+
 def parse_urdf(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
@@ -61,7 +73,7 @@ def parse_urdf(filename):
                 output="screen",
                 emulate_tty=True,
                 parameters=[{
-                    "port": node[1].text,
+                    "port": port_mapping[node[1].text],
                     "robot_name": node[0].text,
                     "timestep": 32
                 }]
